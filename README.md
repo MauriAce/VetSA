@@ -1,6 +1,8 @@
 
 #Desarrollo De Un Sistema Para El Registro De Datos De Una Veterinaria
-Una aplicación híbrida es una aplicación que te permite adaptarla a cualquier sistema operativo, para este proyecto utilizaremos un login con autenticación de Firebase y como elemento nativo se utilizara la cámara del dispositivo móvil, para sacar una foto. 
+
+Una aplicación híbrida es una aplicación que te permite adaptarla a cualquier sistema operativo, para este proyecto utilizaremos un login con autenticación de Firebase y como elemento nativo se utilizara la cámara del dispositivo móvil para sacar una foto. 
+
 #Características de la aplicación
  
 Las funcionalidades que tendrá la aplicación serán resumidas a continuación: 
