@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Agregar Datos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!--  nombre: string;
+  direccion: string;
+  telefono: number;
+  nombreMascota: string;
+  especie: string;
+  raza: string;
+  fechNac: string;
+  observ: string;
+
+
+     inicio prueba firestore  -->
+
+  <ion-item>
+    <ion-label>Nombre :</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Direccion :</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.direccion"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Telefono :</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.telefono"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Nombre Mascota :</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.nombreMascota"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Especie :</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.especie"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Raza :</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.raza"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Fecha de Nacimiento :</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.fechNac"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Observaciones :</ion-label>
+    <ion-input [(ngModel)]="tareaEditando.observ"></ion-input>
+  </ion-item>
+
+
+  <ion-button (click)="clicBotonInsertar()">Guardar</ion-button>
+  <!--  fin prueba firestore -->
+
+  <ion-button ion-button (click)="upload()">subir a firebase!</ion-button>
+
+  <!--   -->
+  <ion-item>
+    <ion-content>
+      <ion-col size="12" *ngFor="let photo of photoService.photos; index as position">
+        <ion-img [src]="photo.webviewPath"></ion-img>
+      </ion-col>
+    </ion-content>
+  </ion-item>
+
+  <!--  on-fab camera -->
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="addPhotoToGallery()">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+
+  </ion-fab>
+
+  <!--  on-fab camera -->
+
+</ion-content>
