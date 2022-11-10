@@ -16,4 +16,11 @@ Cloud Firestore es una base de datos de documentos NoSQL que permite almacenar, 
 
 El Cliente tendrá que registrarse como usuario del sistema, eligiendo un “Nombre de Usuario” y “Contraseña”, una vez validado, accede a cargar sus datos personales y de su mascota.
 
+# TECNOLOGIAS:
+- IONIC
+- ANGULAR
+- CAPACITOR
+- FIREBASE- AUTHENTICATION - CLOUD FIRESTORE-
+- VISUAL STUDIO 2022
+
 
