@@ -11,6 +11,7 @@ Las funcionalidades que tendrá la aplicación serán resumidas a continuación:
 
 El sistema poseerá una base de datos en Cloud Firestore, donde el usuario podrá registrar su mascota y cargar sus datos personales
 Cloud Firestore es una base de datos de documentos NoSQL que permite almacenar, sincronizar y consultar fácilmente datos en tus apps web y para dispositivos móviles a escala global.
+La Aplicacion consume los datos de una API para elegir el nombre la  mascota si no la tienen.
 
 # Autentificación, Firebase 
 
