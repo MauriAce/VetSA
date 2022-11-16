@@ -15,8 +15,9 @@ export class RegisterPage implements OnInit {
 
   ngOnInit() { }
   async onRegister() {
-    const user = await this.authSvc.onRegister( this.user);
-    console.log('creación de usuario exitosa');
+    const user = await this.authSvc.onRegister(this.user);
+    window.alert('Creación de Usuario Exitosa!!!');
+   
      this.router.navigateByUrl('/login')
   
     }

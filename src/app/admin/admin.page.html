@@ -5,17 +5,13 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!--  nombre: string;
-  direccion: string;
-  telefono: number;
-  nombreMascota: string;
-  especie: string;
-  raza: string;
-  fechNac: string;
-  observ: string;
-
-
-     inicio prueba firestore  -->
+  <ion-card>
+    <img aling="center" src="assets/img/logo.jpg" />
+    <ion-card-header>
+      <ion-card-title></ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
 
   <ion-item>
     <ion-label>Nombre :</ion-label>
@@ -33,6 +29,16 @@
     <ion-label>Nombre Mascota :</ion-label>
     <ion-input [(ngModel)]="tareaEditando.nombreMascota"></ion-input>
   </ion-item>
+  <ion-item>
+    <ion-label>Elegi un nombre de nuestra lista :</ion-label>
+  </ion-item>
+  <ion-item>
+
+    <ion-select [compareWith]="compareWith" placeholder="Selecciona un nombre">
+      <ion-select-option *ngFor="let usuario of usuarios" [value]="nombreMascotaLista">{{ usuario.name }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
   <ion-item>
     <ion-label>Especie :</ion-label>
     <ion-input [(ngModel)]="tareaEditando.especie"></ion-input>
@@ -53,16 +59,20 @@
 
   <ion-button (click)="clicBotonInsertar()">Guardar</ion-button>
   <!--  fin prueba firestore -->
-
-  <ion-button ion-button (click)="upload()">subir a firebase!</ion-button>
-
+  <!--
+  <ion-button ion-button (click)="upload()">subir a firebase!</ion-button> -->
   <!--   -->
   <ion-item>
-    <ion-content>
-      <ion-col size="12" *ngFor="let photo of photoService.photos; index as position">
-        <ion-img [src]="photo.webviewPath"></ion-img>
-      </ion-col>
-    </ion-content>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12" *ngFor="let photo of photoService.photos; index as position">
+          <ion-img [src]="photo.webviewPath"></ion-img>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
   </ion-item>
 
   <!--  on-fab camera -->

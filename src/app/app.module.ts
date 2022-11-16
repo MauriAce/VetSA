@@ -14,14 +14,14 @@ import { environment } from './../environments/environment';
 import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
-//port { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { HttpClientModule  } from '@angular/common/http';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-//import { getStorage } from "firebase/storage";
+
 import { provideStorage, getStorage } from "@angular/fire/storage";
 
 
@@ -43,7 +43,7 @@ export const firebaseConfig = {
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(),
-   AppRoutingModule, AngularFireModule.initializeApp(environment.firebaseConfig),// firebase
+   AppRoutingModule,HttpClientModule, AngularFireModule.initializeApp(environment.firebaseConfig),// firebase
     AngularFirestoreModule,
     AngularFireAuthModule, 
     provideFirebaseApp(() => initializeApp(firebaseConfig)),

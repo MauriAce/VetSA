@@ -4,25 +4,29 @@
   </ion-toolbar>
 </ion-header>
 
-  <ion-content padding>
-    <ion-card>
-      <ion-item>
+<ion-content padding>
+  <ion-card>
+    <img aling="center" src="assets/img/logo.jpg" />
+    <ion-card-header>
+      <ion-card-title></ion-card-title>
+      <ion-card-subtitle></ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>      Email:    </ion-label>
+      <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>      Password:    </ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
 
+    <ion-item-divider>
 
-        <ion-label>      Email:    </ion-label>
-        <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+      <ion-button size="small" (click)="onLogin()">Login</ion-button>
+    </ion-item-divider>
 
-      </ion-item>
-      <ion-item>
-        <ion-label>      Password:    </ion-label>
-        <ion-input type="password" [(ngModel)]="user.password"></ion-input>
-      </ion-item>
-
-      <ion-item-divider>
-
-        <ion-button size="small" (click)="onLogin()">Login</ion-button>
-      </ion-item-divider>
-
-    </ion-card>
-  </ion-content>
+  </ion-card>
+</ion-content>
 
