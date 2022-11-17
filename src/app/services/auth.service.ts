@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {  AngularFireAuth} from '@angular/fire/compat/auth';
 import { Auth, createUserWithEmailAndPassword, getAuth } from 'firebase/auth';
 import { User } from '../shared/user.class';
-
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +16,7 @@ export class AuthService {
     password: any;
     updateProfile: any;
     error: any;
+  private router: Router
 
   constructor(public afAuth: AngularFireAuth) {
     afAuth.authState.subscribe(user => (this.isLogged = user));
@@ -27,11 +28,20 @@ export class AuthService {
     } catch (error) {
       console.log('error en login', error);
     }
-    // registro
+
+   
 
 
   }
+ // logout
+    logout(){
+      this.afAuth.signOut().then(() => {
+        console.log("Esperamos verte pronto");
+      //  this.router.navigateByUrl('/home')
+      });
+    }
 
+    // registro
   async onRegister(user: User) {
     const auth = getAuth();
     console.log(auth)

@@ -1,6 +1,14 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-title>Agregar Datos</ion-title>
+    <ion-button (click)="atras()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+      <ion-button (click)="logout()" slot="end">
+        <ion-icon name="log-out-outline"> </ion-icon>
+
+      </ion-button>
+
   </ion-toolbar>
 </ion-header>
 
@@ -62,6 +70,8 @@
   <!--
   <ion-button ion-button (click)="upload()">subir a firebase!</ion-button> -->
   <!--   -->
+ 
+  
   <ion-item>
 
     <ion-grid>

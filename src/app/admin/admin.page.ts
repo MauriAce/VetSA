@@ -6,8 +6,9 @@ import { PhotoService } from '../services/photo.service';
 import { PickerController } from '@ionic/angular';
 import { Tarea } from '../tarea';
 import { GetapiService } from '../services/getapi.service';
+import { AuthService } from '../services/auth.service';
 
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.page.html',
@@ -23,8 +24,9 @@ export class AdminPage implements OnInit {
     public navCtrl: NavController,
     private firestore: FirestoreService,
     public photoService: PhotoService,
-    public _services :GetapiService,
-
+    public _services: GetapiService,
+    private afAuth:AuthService,
+    private router: Router,
   ) {
     this.myModel = {}; // Inicializacion del modelo como un objeto vacio.
 
@@ -72,6 +74,14 @@ export class AdminPage implements OnInit {
   }
 
   //
+  logout() {
+    this.afAuth.logout();
+    this.router.navigateByUrl('/home')
+
+  }
+  atras() {
+    this.router.navigateByUrl('/home')
+  }
 
   
 
